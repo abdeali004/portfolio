@@ -1,0 +1,80 @@
+/*fonts*/
+@font-face {
+    font-family: OPmono;
+    src: url(OperatorMonoLig-MediumItalic.otf);
+  }
+  @font-face {
+    font-family: OPmono2;
+    src: url(OperatorMonoLightItalic.otf);
+  }
+  @font-face {
+    font-family: fira;
+    src: url(FiraCode-Regular.ttf);
+  }
+
+/*end*/
+/*this code is develpoed by abdeali stationwala*/
+
+/*Scroller*/
+/* width */
+
+::-webkit-scrollbar 
+{
+  width: 10px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7a0808; 
+  height: 80px;
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(184, 76, 76); 
+  height: 80px;
+  border-radius: 4px;
+}
+
+/*end*/
+
+
+
+body{
+    background-color: #7a0808;
+    font-family: fira, Arial, serif;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    color: #dbae25   ;
+    font-family: OPmono, Arial, serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+  }
+
+p{
+  color: #cccccc;
+}
+
+.card
+{
+  width: 30%; 
+  background-color: rgba(183, 183, 221, 0.1);
+  padding: 2px;
+  margin: 4px;
+}
+
+.foot
+{
+  background-color: #cccccc !important;
+}
+
+img:hover {opacity: 0.7;}
