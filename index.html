@@ -708,76 +708,20 @@
 		</div>
 		<!--personal script-->
 		<script>
-			function sendEmail() {
-				document.getElementById("contact_mail").disabled = true;
-				var name = document.getElementById("fname").value;
-				var company = document.getElementById("company").value;
-				var email = document.getElementById("email").value;
-				var heading = document.getElementById("subject").value;
-				var message = document.getElementById("message").value;
-
-				if (message == "" || email == "" || heading == "" || name == "" || company == "") {
-					document.getElementById("emailAction").innerHTML = '<div class="alert alert-danger" role="alert">All Fields are mandatory in Form. You can also contact me on <a href="https://www.linkedin.com/in/abdeali004" target="_blank">LinkedIn</a>.</div>';
-					document.getElementById("contact_mail").disabled = false;
-					return
-				}
-				document.getElementById("emailAction").innerHTML = '<div class="alert alert-success" role="alert">Sending....</div>';
-				$.ajax({
-					type: "POST",
-					url: '/contact_form',
-					data: {
-						csrfmiddlewaretoken: '{{ csrf_token }}',
-						'name': name,
-						'company': company,
-						'email': email,
-						'heading': heading,
-						'message': message,
-					},
-					dataType: 'json',
-					success: function (data) {
-						if (data.successful == "true") {
-							document.getElementById("emailAction").innerHTML = '<div class="alert alert-success" role="alert">Thank you! Your message will be delivered to me.</div>';
-						}
-						else {
-							document.getElementById("emailAction").innerHTML = '<div class="alert alert-danger" role="alert">Something went wrong in sending mail. Sorry! Please try again later or contact me on <a href="https://www.linkedin.com/in/abdeali004" target="_blank">LinkedIn</a>.</div>';
-
-						}
+			function readMoreLess() {
+				// var dots = document.getElementById("dots");
+				var moreText = document.getElementById("more");
+				var btnText = document.getElementById("more-button");
+			
+				if (moreText.style.display === "none") {
+					//   dots.style.display = "none";
+					btnText.innerHTML = "Read Less"; 
+					moreText.style.display = "inline";
+					} else {
+						//   dots.style.display = "inline";
+						btnText.innerHTML = "...Read More"; 
+						moreText.style.display = "none";
 					}
-				});
-				document.getElementById("contact_mail").disabled = false;
-			}
-			function invite() {
-				var email = document.getElementById("invite_mail").value;
-				document.getElementById("invite_mail").disabled = true;
-				document.getElementById("invite_button").disabled = true;
-				document.getElementById("invite_button").value = "sending";
-				$.ajax({
-					type: "POST",
-					url: '/invite',
-					data: {
-						csrfmiddlewaretoken: '{{ csrf_token }}',
-						'email': email,
-						'value': 'invite',
-					},
-					dataType: 'json',
-					success: function (data) {
-						if (data.successful == "true") {
-							document.getElementById("invite_button").style.backgroundColor = "green";
-							document.getElementById("invite_button").value = "sent";
-							document.getElementById("invite_action").innerHTML = 'Note: Also check in <b style="color: red">Promotions</b>.'
-						}
-						else {
-							document.getElementById("invite_button").style.backgroundColor = "red";
-							document.getElementById("invite_button").value = "failed.";
-						}
-					}
-				});
-				setTimeout(function () {
-					document.getElementById("invite_mail").disabled = false;
-					document.getElementById("invite_button").disabled = false;
-					document.getElementById("invite_button").style.backgroundColor = "#7a0808";
-					document.getElementById("invite_button").value = "Share";
-				}, 2000);
 			}
 		</script>
 		<!--personal script ends-->
