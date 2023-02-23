@@ -147,3 +147,20 @@
 
 
 }());
+
+
+function readMoreLess() {
+	// var dots = document.getElementById("dots");
+	var moreText = document.getElementById("more");
+	var btnText = document.getElementById("more-button");
+  
+	if (moreText.style.display === "none") {
+		//   dots.style.display = "none";
+		  btnText.innerHTML = "Read Less"; 
+		  moreText.style.display = "inline";
+		} else {
+			//   dots.style.display = "inline";
+			  btnText.innerHTML = "...Read More"; 
+			  moreText.style.display = "none";
+		}
+  }
