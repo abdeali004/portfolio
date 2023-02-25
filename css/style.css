@@ -54,6 +54,11 @@
 * 	Template Style 
 *
 * ======================================================= */
+
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   font-family: "fira", Arial, serif;
   font-weight: 400;
