@@ -64,12 +64,9 @@ function parseCertificatesOnload() {
 function imageViewModal(img) {
   modal.style.display = "block";
   modalImg.src = img.src;
-  captionText.innerHTML = "Data Analysis With Python";
 }
 
 // Get the <span> element that closes the modal
-// When the user clicks on <span> (x), close the modal
-document.getElementsByClassName("close")[0].onclick = closeImageModal();
 
 // Close modal function
 function closeImageModal() {
