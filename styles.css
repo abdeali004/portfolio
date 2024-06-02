@@ -1,0 +1,29 @@
+/* styles.css */
+	body {
+		font-family: Arial, sans-serif;
+		background-color: #f9f9f9;
+	}
+
+	.certificate-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+		gap: 20px;
+		padding: 20px;
+	}
+
+	.certificate-card {
+		background-color: #fff;
+		border-radius: 10px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		overflow: hidden;
+		transition: transform 0.2s;
+	}
+
+	.certificate-card:hover {
+		transform: scale(1.05);
+	}
+
+	.certificate-image {
+		width: 100%;
+		height: auto;
+	}

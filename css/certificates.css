@@ -1,0 +1,65 @@
+@font-face {
+    font-family: fira;
+    src: url(FiraCode-Regular.ttf);
+}
+
+
+/* root default css variables */
+:root {
+    --color-theme-default-general: #451a2d;
+    --color-theme-default-general-light: #a78a97;
+    /* Your global color value */
+}
+
+body {
+    font-family: fira !important;
+}
+
+.bg-default {
+    background-color: var(--color-theme-default-general);
+}
+
+.bg-default-light {
+    background-color: var(--color-theme-default-general-light);
+    color: black;
+}
+
+.card {
+    background-color: var(--color-theme-default-general);
+}
+
+.card-row {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+}
+
+.card-text {
+    color: white;
+}
+
+.card-body {
+    padding: 5px !important;
+}
+
+.accordion-button {
+    background-color: var(--color-theme-default-general) !important;
+    color: white !important;
+}
+
+.accordion-button:focus {
+    background-color: var(--color-theme-default-general) !important;
+    color: white !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--color-theme-default-general) !important;
+    color: white !important;
+}
+
+.accordion-btn-icon {
+    color: white !important;
+}
+
+.accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
